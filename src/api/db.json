@@ -1,0 +1,141 @@
+{
+  "orders": [
+    {
+      "id": "1",
+      "tableNumber": 5,
+      "totalCost": 25.5,
+      "tip": 3,
+      "date": "2025-01-16T18:30:00",
+      "pizzas": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "2",
+      "delivery": true,
+      "totalCost": 35,
+      "tip": 5,
+      "date": "2025-01-16T19:00:00",
+      "pizzas": [
+        3
+      ]
+    },
+    {
+      "id": "7d88",
+      "type": "Dine-in",
+      "tableNumber": "-1",
+      "deliveryEmployee": "",
+      "orderEmployee": "1",
+      "pizzas": [],
+      "tip": 0
+    },
+    {
+      "id": "9c79",
+      "type": "Dine-in",
+      "tableNumber": "1",
+      "deliveryEmployee": "",
+      "orderEmployee": "5",
+      "pizzas": [],
+      "tip": 0
+    }
+  ],
+  "pizzas": [
+    {
+      "id": "1",
+      "size": "medium",
+      "cheese": "Four Cheese",
+      "sauce": "Marinara",
+      "toppings": [
+        "sausage",
+        "basil"
+      ]
+    },
+    {
+      "id": "2",
+      "size": "small",
+      "cheese": "Buffalo Mozzarella",
+      "sauce": "Garlic White",
+      "toppings": [
+        "mushroom",
+        "onion"
+      ]
+    },
+    {
+      "id": "3",
+      "size": "large",
+      "cheese": "Vegan",
+      "sauce": "Arrabbiata",
+      "toppings": [
+        "pepperoni",
+        "extra cheese",
+        "black olive"
+      ]
+    }
+  ],
+  "menu": {
+    "sizes": [
+      {
+        "size": "small",
+        "description": "10\"",
+        "price": 10
+      },
+      {
+        "size": "medium",
+        "description": "14\"",
+        "price": 12
+      },
+      {
+        "size": "large",
+        "description": "18\"",
+        "price": 15
+      }
+    ],
+    "cheeses": [
+      "Buffalo Mozzarella",
+      "Four Cheese",
+      "Vegan",
+      "None (cheeseless)"
+    ],
+    "sauces": [
+      "Marinara",
+      "Arrabbiata",
+      "Garlic White",
+      "None (sauceless pizza)"
+    ],
+    "toppings": [
+      {
+        "name": "sausage",
+        "price": 0.5
+      },
+      {
+        "name": "pepperoni",
+        "price": 0.5
+      },
+      {
+        "name": "mushroom",
+        "price": 0.5
+      },
+      {
+        "name": "onion",
+        "price": 0.5
+      },
+      {
+        "name": "green pepper",
+        "price": 0.5
+      },
+      {
+        "name": "black olive",
+        "price": 0.5
+      },
+      {
+        "name": "basil",
+        "price": 0.5
+      },
+      {
+        "name": "extra cheese",
+        "price": 0.5
+      }
+    ]
+  }
+}
