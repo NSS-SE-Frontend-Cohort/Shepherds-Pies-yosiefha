@@ -1,0 +1,50 @@
+
+
+/* Container to center the content */
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Menu Columns */
+  .menu-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .menu-column {
+    width: 48%; /* Ensure each column takes up roughly half of the space */
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for inputs */
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #e55347;
+  }
+  

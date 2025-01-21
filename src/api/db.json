@@ -1,43 +1,166 @@
 {
   "orders": [
     {
-      "id": "1",
-      "tableNumber": 5,
-      "totalCost": 25.5,
-      "tip": 3,
-      "date": "2025-01-16T18:30:00",
-      "pizzas": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": "2",
-      "delivery": true,
-      "totalCost": 35,
-      "tip": 5,
-      "date": "2025-01-16T19:00:00",
-      "pizzas": [
-        3
-      ]
-    },
-    {
-      "id": "7d88",
-      "type": "Dine-in",
-      "tableNumber": "-1",
-      "deliveryEmployee": "",
-      "orderEmployee": "1",
-      "pizzas": [],
-      "tip": 0
-    },
-    {
-      "id": "9c79",
-      "type": "Dine-in",
+      "id": "4af7",
+      "receiptNumber": "REC-1737231734706",
+      "timestamp": "1/18/2025, 2:22:14 PM",
+      "date": "1/18/2025",
+      "type": "Dine-In",
       "tableNumber": "1",
-      "deliveryEmployee": "",
-      "orderEmployee": "5",
-      "pizzas": [],
-      "tip": 0
+      "employeeNumber": "1",
+      "items": [
+        {
+          "id": 1,
+          "size": "small",
+          "cheese": "Buffalo Mozzarella",
+          "sauce": "Marinara",
+          "toppings": [
+            "sausage",
+            "pepperoni"
+          ],
+          "price": "11.00"
+        }
+      ],
+      "totalPrice": "11.00"
+    },
+    {
+      "id": "1ee5",
+      "receiptNumber": "REC-1737349265394",
+      "timestamp": "1/19/2025, 11:01:05 PM",
+      "date": "1/19/2025",
+      "type": "Dine-In",
+      "tableNumber": "1",
+      "employeeNumber": "2",
+      "items": [
+        {
+          "id": 1,
+          "size": "small",
+          "cheese": "Buffalo Mozzarella",
+          "sauce": "Marinara",
+          "toppings": [
+            "onion",
+            "mushroom"
+          ],
+          "price": "11.00"
+        }
+      ],
+      "totalPrice": "11.00"
+    },
+    {
+      "id": "4afd",
+      "receiptNumber": "REC-1737405012518",
+      "timestamp": "1/20/2025, 2:30:12 PM",
+      "date": "1/20/2025",
+      "type": "Delivery",
+      "tableNumber": null,
+      "employeeNumber": "3",
+      "items": [
+        {
+          "id": 1,
+          "size": "large",
+          "cheese": "Buffalo Mozzarella",
+          "sauce": "Marinara",
+          "toppings": [
+            "sausage",
+            "mushroom"
+          ],
+          "price": "16.00"
+        }
+      ],
+      "totalPrice": "21.00"
+    },
+    {
+      "id": "536f",
+      "receiptNumber": "REC-1737407580292",
+      "timestamp": "1/20/2025, 3:13:00 PM",
+      "date": "1/20/2025",
+      "type": "Delivery",
+      "tableNumber": null,
+      "employeeNumber": "2",
+      "items": [
+        {
+          "id": 1,
+          "size": "medium",
+          "cheese": "Vegan",
+          "sauce": "Garlic White",
+          "toppings": [
+            "mushroom",
+            "onion"
+          ],
+          "price": "13.00"
+        }
+      ],
+      "totalPrice": "18.00"
+    },
+    {
+      "id": "a3bc",
+      "receiptNumber": "REC-1737407674127",
+      "timestamp": "1/20/2025, 3:14:34 PM",
+      "date": "1/20/2025",
+      "type": "Delivery",
+      "tableNumber": null,
+      "employeeNumber": "4",
+      "items": [
+        {
+          "id": 1,
+          "size": "large",
+          "cheese": "Vegan",
+          "sauce": "None (sauceless pizza)",
+          "toppings": [
+            "black olive",
+            "basil"
+          ],
+          "price": "16.00"
+        }
+      ],
+      "totalPrice": "21.00"
+    },
+    {
+      "id": "a020",
+      "receiptNumber": "REC-1737408327055",
+      "timestamp": "1/20/2025, 3:25:27 PM",
+      "date": "1/20/2025",
+      "type": "Dine-In",
+      "tableNumber": "1",
+      "employeeNumber": "1",
+      "items": [
+        {
+          "id": 1,
+          "size": "large",
+          "cheese": "Four Cheese",
+          "sauce": "Garlic White",
+          "toppings": [
+            "pepperoni",
+            "mushroom"
+          ],
+          "price": "16.00"
+        }
+      ],
+      "totalPrice": "16.00"
+    },
+    {
+      "id": "4c38",
+      "receiptNumber": "REC-1737410627604",
+      "timestamp": "1/20/2025, 4:03:47 PM",
+      "date": "1/20/2025",
+      "type": "Dine-In",
+      "tableNumber": "1",
+      "employeeNumber": "2",
+      "items": [
+        {
+          "id": 1,
+          "size": "large",
+          "cheese": "Four Cheese",
+          "sauce": "Arrabbiata",
+          "toppings": [
+            "pepperoni",
+            "mushroom"
+          ],
+          "price": "16.00"
+        }
+      ],
+      "tipAmount": "10.00",
+      "totalPrice": "26.00"
     }
   ],
   "pizzas": [

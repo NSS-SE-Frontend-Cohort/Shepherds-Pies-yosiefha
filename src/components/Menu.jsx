@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../styles/Menu.css"; // Add this import for the CSS styling
 
 const Menu = ({ onAddToOrder }) => {
   const [menu, setMenu] = useState(null);
@@ -45,72 +46,80 @@ const Menu = ({ onAddToOrder }) => {
   };
 
   return (
-    <div>
+    <div className="menu-container">
       <h1>🍕 Shepherd's Pies Menu 🍕</h1>
 
-      <section>
-        <h2>Sizes</h2>
-        {menu.sizes.map((size, index) => (
-          <div key={index}>
-            <input
-              type="radio"
-              name="size"
-              value={size.size}
-              checked={selectedItems.size === size.size}
-              onChange={() => handleSizeChange(size.size)}
-            />
-            {size.size} ({size.description}) - ${size.price.toFixed(2)}
-          </div>
-        ))}
-      </section>
+      <div className="menu-columns">
+        {/* Left Column */}
+        <div className="menu-column">
+          <section>
+            <h2>Sizes</h2>
+            {menu.sizes.map((size, index) => (
+              <div key={index}>
+                <input
+                  type="radio"
+                  name="size"
+                  value={size.size}
+                  checked={selectedItems.size === size.size}
+                  onChange={() => handleSizeChange(size.size)}
+                />
+                {size.size} ({size.description}) - ${size.price.toFixed(2)}
+              </div>
+            ))}
+          </section>
 
-      <section>
-        <h2>Cheese Options</h2>
-        {menu.cheeses.map((cheese, index) => (
-          <div key={index}>
-            <input
-              type="radio"
-              name="cheese"
-              value={cheese}
-              checked={selectedItems.cheese === cheese}
-              onChange={() => handleCheeseChange(cheese)}
-            />
-            {cheese}
-          </div>
-        ))}
-      </section>
+          <section>
+            <h2>Cheese Options</h2>
+            {menu.cheeses.map((cheese, index) => (
+              <div key={index}>
+                <input
+                  type="radio"
+                  name="cheese"
+                  value={cheese}
+                  checked={selectedItems.cheese === cheese}
+                  onChange={() => handleCheeseChange(cheese)}
+                />
+                {cheese}
+              </div>
+            ))}
+          </section>
 
-      <section>
-        <h2>Sauce Options</h2>
-        {menu.sauces.map((sauce, index) => (
-          <div key={index}>
-            <input
-              type="radio"
-              name="sauce"
-              value={sauce}
-              checked={selectedItems.sauce === sauce}
-              onChange={() => handleSauceChange(sauce)}
-            />
-            {sauce}
-          </div>
-        ))}
-      </section>
+          <section>
+            <h2>Sauce Options</h2>
+            {menu.sauces.map((sauce, index) => (
+              <div key={index}>
+                <input
+                  type="radio"
+                  name="sauce"
+                  value={sauce}
+                  checked={selectedItems.sauce === sauce}
+                  onChange={() => handleSauceChange(sauce)}
+                />
+                {sauce}
+              </div>
+            ))}
+          </section>
+        </div>
 
-      <section>
-        <h2>Toppings ($0.50 each)</h2>
-        {menu.toppings.map((topping, index) => (
-          <div key={index}>
-            <input
-              type="checkbox"
-              name="topping"
-              value={topping.name}
-              checked={selectedItems.toppings.includes(topping.name)}
-              onChange={() => handleToppingToggle(topping.name)}
-            />
-            {topping.name}
-          </div>
-        ))}
-      </section>
+        {/* Right Column */}
+        <div className="menu-column">
+          <section>
+            <h2>Toppings ($0.50 each)</h2>
+            {menu.toppings.map((topping, index) => (
+              <div key={index}>
+                <input
+                  type="checkbox"
+                  name="topping"
+                  value={topping.name}
+                  checked={selectedItems.toppings.includes(topping.name)}
+                  onChange={() => handleToppingToggle(topping.name)}
+                />
+                {topping.name}
+              </div>
+            ))}
+          </section>
+        </div>
+      </div>
 
       <section>
         <h2>Order Preview</h2>
@@ -133,4 +142,5 @@ const Menu = ({ onAddToOrder }) => {
 };
 
 export default Menu;
+
 
