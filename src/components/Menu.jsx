@@ -118,10 +118,7 @@ const Menu = ({ onAddToOrder }) => {
               </div>
             ))}
           </section>
-        </div>
-      </div>
-
-      <section>
+          <section>
         <h2>Order Preview</h2>
         <div>
           <p><strong>Size:</strong> {selectedItems.size || "None selected"}</p>
@@ -135,6 +132,10 @@ const Menu = ({ onAddToOrder }) => {
           </p>
         </div>
       </section>
+        </div>
+      </div>
+
+      
 
       <button onClick={handleAddToOrder}>Add to Receipt</button>
     </div>

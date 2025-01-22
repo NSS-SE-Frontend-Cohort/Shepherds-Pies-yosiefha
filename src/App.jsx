@@ -144,7 +144,14 @@ return (
     <h1>Shepherd's Pies Order Management</h1>
 
     <div className="container">
+
       {/* Left Column */}
+      <div className="right-column">
+        <Menu onAddToOrder={handleAddToOrder} />
+       
+      </div>
+
+      {/* Right Column */}
       <div className="left-column">
         <h2>Current Receipt</h2>
         <OrderList order={order} />
@@ -177,11 +184,10 @@ return (
         </div>
       </div>
 
-      {/* Right Column */}
-      <div className="right-column">
-        <Menu onAddToOrder={handleAddToOrder} />
-        <h2>Search Orders</h2>
-        <SearchOrders onSearch={handleSearch} />
+    </div>
+
+    <div className="search-orders"> 
+    <SearchOrders onSearch={handleSearch} />
         <h2>Search Results</h2>
         {searchResults?.length > 0 ? (
           <ul>
@@ -203,7 +209,6 @@ return (
         ) : (
           <p>No results found.</p>
         )}
-      </div>
     </div>
   </div>
 );

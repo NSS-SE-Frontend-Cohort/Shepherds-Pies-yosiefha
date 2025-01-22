@@ -1,242 +1,169 @@
+/* General App Styling */
 .App {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    padding: 30px 50px;
-    box-sizing: border-box;
-  }
-  
-  h1 {
-    font-size: 36px;
-    text-align: center;
-    color: #fff;
-    background-color: #4CAF50;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-  }
-  
-  /* Flexbox layout for the left and right columns */
-  .container {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px; /* Reduced gap between columns */
-  }
-  
-  .left-column {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .right-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    border: 1px solid #ddd;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .finalized-orders-box {
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  }
-  
-  .finalized-orders-box h2 {
-    margin-bottom: 15px;
-  }
-  
-  .finalized-orders-box ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .finalized-orders-box li {
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .finalized-orders-box li:last-child {
-    border-bottom: none;
-  }
-  
-  
-  
-  /* Form and button styling */
-  input[type="number"],
-  input[type="text"],
-  select,
-  button {
-    width: 100%;
-    max-width: 300px;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-  }
-  
-  /* Align inputs and buttons to the right */
-  input[type="number"],
-  input[type="text"],
-  select,
-  button {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: right;
-  }
-  
-  button {
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  /* Styling for finalized orders */
-  .finalized-orders {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .finalized-orders ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .finalized-orders li {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .finalized-orders li:last-child {
-    border-bottom: none;
-  }
-  
-  .finalized-orders strong {
-    color: #333;
-    font-size: 16px;
-  }
-  
-  .finalized-orders p {
-    color: #555;
-  }
-  
-  .finalized-orders ul li ul {
-    list-style-type: none;
-    padding-left: 20px;
-    color: #777;
-  }
-  
-  /* Styling for Search section */
-  .search-section {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .search-section input {
-    width: 100%;
-    max-width: 300px;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  /* Styling for Search Results */
-  .search-results {
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid #ddd;
-  }
-  
-  .search-results ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  .search-results li {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-  }
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  padding: 20px 30px; /* Adjusted for compact layout */
+  box-sizing: border-box;
+}
 
-  /* Menu.css */
+/* Header */
+h1 {
+  font-size: 32px; /* Reduced font size */
+  text-align: center;
+  color: #fff;
+  background-color: #4CAF50;
+  padding: 15px; /* Reduced padding */
+  border-radius: 8px;
+  margin-bottom: 20px; /* Reduced margin */
+}
 
-/* Container to center the content */
+/* Flexbox layout for the left and right columns */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Reduced gap */
+}
+
+.left-column,
+.right-column {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px; /* Reduced padding */
+}
+
+/* Left Column: Menu */
+.left-column {
+  flex: 2;
+  max-height: 80vh; /* Ensure it fits without scrolling */
+  overflow-y: auto;
+}
+
+/* Right Column: Order Form and Finalized Orders */
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Reduced gap between sections */
+}
+
+.finalized-orders-box,
+.search-section {
+  padding: 10px; /* Reduced padding */
+  max-height: 35vh; /* Limit height for compact display */
+  overflow-y: auto;
+}
+
+/* Menu Styling */
 .menu-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Menu Columns */
-  .menu-columns {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  
-  .menu-column {
-    width: 48%; /* Ensure each column takes up roughly half of the space */
-  }
-  
-  section {
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-  }
-  
-  /* Styling for inputs */
-  input[type="radio"],
-  input[type="checkbox"] {
-    margin-right: 10px;
-  }
-  
-  button {
-    background-color: #ff6347;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  
-  button:hover {
-    background-color: #e55347;
-  }
-  
-  
+  max-width: 100%; /* Ensure it fits within the column */
+}
+
+.menu-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.menu-column {
+  width: 48%; /* Each column takes ~half the space */
+}
+
+section {
+  margin-bottom: 15px; /* Reduced margin between sections */
+}
+
+h2 {
+  font-size: 1.1em;
+  margin-bottom: 8px; /* Tightened spacing */
+}
+
+/* Input and Button Styling */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px; /* Reduced spacing for inputs */
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px; /* Reduced padding */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Search Results */
+.search-results ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.search-results li {
+  margin-bottom: 10px; /* Reduced margin */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Scrollbar Styling */
+.left-column::-webkit-scrollbar,
+.right-column::-webkit-scrollbar,
+.finalized-orders-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.left-column::-webkit-scrollbar-thumb,
+.right-column::-webkit-scrollbar-thumb,
+.finalized-orders-box::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Search Orders Section */
+.search-orders {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px; /* Add space from the main container */
+}
+
+.search-orders h2 {
+  margin-bottom: 10px;
+}
+
+.search-section input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.search-results ul {
+  list-style: none;
+  padding: 0;
+}
+
+.search-results li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
