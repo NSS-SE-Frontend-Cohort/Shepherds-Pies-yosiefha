@@ -48,11 +48,69 @@ h1 {
   gap: 15px; /* Reduced gap between sections */
 }
 
-.finalized-orders-box,
-.search-section {
-  padding: 10px; /* Reduced padding */
-  max-height: 35vh; /* Limit height for compact display */
-  overflow-y: auto;
+/* Input and Select Styling */
+input[type="number"],
+input[type="text"],
+input[type="date"],
+select {
+  width: 100%; /* Full width based on container */
+  max-width: 300px; /* Uniform maximum width for all inputs */
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+/* Button Styling */
+button {
+  align-self: flex-start; /* Align button to the left of the form */
+  padding: 5px 10px; /* Smaller padding for a shorter appearance */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  width: auto; /* Allow the button size to adapt to the content */
+  max-width: 200px; /* Ensure it's not too wide */
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Finalize Order Section */
+.finalize-order {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.finalize-order h2 {
+  margin-bottom: 15px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center; /* Aligns label and input vertically */
+  gap: 20px; /* Space between label and input */
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+  width: 150px; /* Fixed width to align inputs horizontally */
+  text-align: right; /* Align label text to the right */
+  font-size: 14px;
+  font-weight: bold;
 }
 
 /* Menu Styling */
@@ -79,29 +137,10 @@ h2 {
   margin-bottom: 8px; /* Tightened spacing */
 }
 
-/* Input and Button Styling */
+/* Input and Button Styling for Menu */
 input[type="radio"],
 input[type="checkbox"] {
   margin-right: 8px; /* Reduced spacing for inputs */
-}
-
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 8px 16px; /* Reduced padding */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
 }
 
 /* Search Results */
@@ -134,36 +173,20 @@ button:disabled {
 
 /* Search Orders Section */
 .search-orders {
+  margin-top: 20px;
+  padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #fff;
-  padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 20px; /* Add space from the main container */
 }
 
-.search-orders h2 {
-  margin-bottom: 10px;
+.search-orders h3 {
+  margin-bottom: 15px;
 }
 
-.search-section input {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-.search-results ul {
-  list-style: none;
-  padding: 0;
-}
-
-.search-results li {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+.search-orders form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form groups */
 }

@@ -84,56 +84,49 @@ const OrderForm = ({ onFinalizeOrder }) => {
   };
 
   return (
-    <div>
-      <h2>Finalize Order</h2>
-      <div>
-        <label>
-          Order Type:
-          <select value={type} onChange={(e) => setType(e.target.value)}>
-            <option value="Dine-In">Dine-In</option>
-            <option value="Delivery">Delivery</option>
-          </select>
-        </label>
-      </div>
-      {type === "Dine-In" && (
-        <div>
-          <label>
-            Table Number:
-            <input
-              type="number"
-              value={tableNumber}
-              onChange={(e) => setTableNumber(e.target.value)}
-              placeholder="Enter table number"
-            />
-          </label>
-        </div>
-      )}
-      <div>
-        <label>
-          Employee Number:
-          <input
-            type="text"
-            value={employeeNumber}
-            onChange={(e) => setEmployeeNumber(e.target.value)}
-            placeholder="Enter employee number"
-          />
-        </label>
-      </div>
-      <div>
-        <label>
-          Tip Amount ($):
-          <input
-            type="number"
-            step="0.01"
-            min="0"
-            value={tipAmount}
-            onChange={(e) => setTipAmount(e.target.value)}
-            placeholder="Enter tip amount"
-          />
-        </label>
-      </div>
-      <button onClick={handleFinalize}>Generate Order</button>
+    <div className="finalize-order">
+    <h2>Finalize Order</h2>
+    <div className="form-group">
+      <label>Order Type:</label>
+      <select value={type} onChange={(e) => setType(e.target.value)}>
+        <option value="Dine-In">Dine-In</option>
+        <option value="Delivery">Delivery</option>
+      </select>
     </div>
+    {type === "Dine-In" && (
+      <div className="form-group">
+        <label>Table Number:</label>
+        <input
+          type="number"
+          value={tableNumber}
+          onChange={(e) => setTableNumber(e.target.value)}
+          placeholder="Enter table number"
+        />
+      </div>
+    )}
+    <div className="form-group">
+      <label>Employee Number:</label>
+      <input
+        type="text"
+        value={employeeNumber}
+        onChange={(e) => setEmployeeNumber(e.target.value)}
+        placeholder="Enter employee number"
+      />
+    </div>
+    <div className="form-group">
+      <label>Tip Amount ($):</label>
+      <input
+        type="number"
+        step="0.01"
+        min="0"
+        value={tipAmount}
+        onChange={(e) => setTipAmount(e.target.value)}
+        placeholder="Enter tip amount"
+      />
+    </div>
+    <button onClick={handleFinalize}>Generate Order</button>
+  </div>
+  
   );
 };
 
