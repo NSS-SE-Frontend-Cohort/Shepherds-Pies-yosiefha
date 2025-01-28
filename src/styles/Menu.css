@@ -34,17 +34,4 @@
     margin-right: 10px;
   }
   
-  button {
-    background-color: #ff6347;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  
-  button:hover {
-    background-color: #e55347;
-  }
   

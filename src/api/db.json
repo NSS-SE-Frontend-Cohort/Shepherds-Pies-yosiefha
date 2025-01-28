@@ -198,6 +198,113 @@
       ],
       "tipAmount": "5.00",
       "totalPrice": "18.50"
+    },
+    {
+      "id": "d879",
+      "receiptNumber": "REC-1737816609821",
+      "timestamp": "1/25/2025, 8:50:09 AM",
+      "date": "1/25/2025",
+      "type": "Delivery",
+      "tableNumber": null,
+      "employeeNumber": "2",
+      "items": [
+        {
+          "id": 1,
+          "size": "medium",
+          "cheese": "Four Cheese",
+          "sauce": "Arrabbiata",
+          "toppings": [
+            "black olive",
+            "green pepper"
+          ],
+          "price": "13.00"
+        }
+      ],
+      "tipAmount": "0.00",
+      "totalPrice": "18.00"
+    },
+    {
+      "id": "2d7d",
+      "receiptNumber": "REC-1737828372305",
+      "timestamp": "1/25/2025, 12:06:12 PM",
+      "date": "1/25/2025",
+      "type": "Dine-In",
+      "tableNumber": "1",
+      "employeeNumber": "3",
+      "items": [
+        {
+          "id": 1,
+          "size": "small",
+          "cheese": "Buffalo Mozzarella",
+          "sauce": "Marinara",
+          "toppings": [
+            "onion",
+            "mushroom"
+          ],
+          "price": "11.00"
+        },
+        {
+          "id": 2,
+          "size": "large",
+          "cheese": "Vegan",
+          "sauce": "Garlic White",
+          "toppings": [
+            "black olive",
+            "basil",
+            "extra cheese"
+          ],
+          "price": "16.50"
+        }
+      ],
+      "tipAmount": "10.00",
+      "totalPrice": "37.50"
+    },
+    {
+      "id": "93b5",
+      "receiptNumber": "REC-1737829806362",
+      "timestamp": "1/25/2025, 12:30:06 PM",
+      "date": "1/25/2025",
+      "type": "Dine-In",
+      "tableNumber": "1",
+      "employeeNumber": "1",
+      "items": [
+        {
+          "id": 1,
+          "size": "medium",
+          "cheese": "Four Cheese",
+          "sauce": "Arrabbiata",
+          "toppings": [
+            "onion",
+            "mushroom"
+          ],
+          "price": "13.00"
+        }
+      ],
+      "tipAmount": "0.00",
+      "totalPrice": "13.00"
+    },
+    {
+      "id": "6d86",
+      "receiptNumber": "REC-1738022443211",
+      "timestamp": "1/27/2025, 6:00:43 PM",
+      "date": "1/27/2025",
+      "type": "Delivery",
+      "tableNumber": null,
+      "employeeNumber": "3",
+      "items": [
+        {
+          "id": 1,
+          "size": "small",
+          "cheese": "Buffalo Mozzarella",
+          "sauce": "Arrabbiata",
+          "toppings": [
+            "onion"
+          ],
+          "price": "10.50"
+        }
+      ],
+      "tipAmount": "0.00",
+      "totalPrice": "15.50"
     }
   ],
   "pizzas": [

@@ -6,16 +6,6 @@
   box-sizing: border-box;
 }
 
-/* Header */
-h1 {
-  font-size: 32px; /* Reduced font size */
-  text-align: center;
-  color: #fff;
-  background-color: #4CAF50;
-  padding: 15px; /* Reduced padding */
-  border-radius: 8px;
-  margin-bottom: 20px; /* Reduced margin */
-}
 
 /* Flexbox layout for the left and right columns */
 .container {
@@ -113,35 +103,6 @@ label {
   font-weight: bold;
 }
 
-/* Menu Styling */
-.menu-container {
-  max-width: 100%; /* Ensure it fits within the column */
-}
-
-.menu-columns {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.menu-column {
-  width: 48%; /* Each column takes ~half the space */
-}
-
-section {
-  margin-bottom: 15px; /* Reduced margin between sections */
-}
-
-h2 {
-  font-size: 1.1em;
-  margin-bottom: 8px; /* Tightened spacing */
-}
-
-/* Input and Button Styling for Menu */
-input[type="radio"],
-input[type="checkbox"] {
-  margin-right: 8px; /* Reduced spacing for inputs */
-}
 
 /* Search Results */
 .search-results ul {
@@ -190,3 +151,209 @@ input[type="checkbox"] {
   flex-direction: column;
   gap: 15px; /* Space between form groups */
 }
+
+/* Header Styling */
+.app-header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* To avoid icons overflowing */
+}
+
+.header-text-container {
+  text-align: left;
+  z-index: 2; /* Ensure the text stays on top */
+}
+
+.app-header-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ffdf00, 0 0 20px #ffdf00;
+}
+
+.app-header-subtext {
+  font-size: 1rem;
+  color: #ccc;
+  text-shadow: 0 0 5px #ccc;
+}
+
+/* Right Column: Animated Pizzas and Chef Hats */
+.header-animation {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+}
+
+.app-header-icon {
+  font-size: 3rem;
+  color: #ffd700; /* Golden Color */
+  position: absolute;
+  transition: transform 0.3s ease;
+  animation: move-icon 10s linear infinite, sparkle 1.5s ease-in-out infinite;
+}
+.pizza-icon {
+  font-size: 40px;
+  color: #f5a623; /* Goldish color */
+  filter: drop-shadow(0 0 5px #f5a623) drop-shadow(0 0 10px #f5a623);
+}
+.chef-hat-icon {
+  font-size: 40px;
+  color: #f5a623; /* Goldish color */
+  filter: drop-shadow(0 0 5px #f5a623) drop-shadow(0 0 10px #f5a623);
+}
+
+.smiling-chef-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: #f5a623; /* Golden color */
+  filter: drop-shadow(0 0 5px #f5a623) drop-shadow(0 0 10px #f5a623);
+  animation: smileAnimation 5s infinite;
+}
+
+/* Keyframe Animation for Smiling Chef Icons */
+@keyframes smileAnimation {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(30px, -20px) rotate(10deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.8;
+  }
+}
+
+/* Smiling Chef Icons with animation */
+.smiling-chef-icon {
+  position: absolute;
+  font-size: 30px; /* Adjust the size */
+  color: gold; /* Golden color for the chef */
+  animation: smileAnimation 4s infinite; /* Apply the animation */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Add a glowing or shining effect */
+.smiling-chef-icon {
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6),
+               0 0 30px rgba(255, 215, 0, 0.4), 0 0 40px rgba(255, 215, 0, 0.2);
+}
+
+
+@keyframes move-icon {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(50px) translateY(-50px);
+  }
+  50% {
+    transform: translateX(100px) translateY(0);
+  }
+  75% {
+    transform: translateX(150px) translateY(50px);
+  }
+  100% {
+    transform: translateX(200px) translateY(0);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+  }
+  50% {
+    text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffcc00;
+  }
+  100% {
+    text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+  }
+}
+.tip-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tip-section p {
+  margin: 0; /* To remove any default margin */
+}
+
+.tip-section input {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.tip-section button {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tip-section .edit-btn {
+  background-color: #ffcc00;
+  color: white;
+  border: none;
+}
+
+.tip-section .save-btn, .tip-section .cancel-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  margin-left: 5px;
+}
+
+.tip-section .cancel-btn {
+  background-color: #f44336;
+}
+.receipt-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 80%;
+  margin: auto;
+}
+
+.receipt-header {
+  margin-bottom: 20px;
+}
+
+.receipt-items ul {
+  list-style: none;
+  padding: 0;
+}
+
+.receipt-items li {
+  margin-bottom: 10px;
+}
+
+.receipt-footer {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.receipt-footer strong {
+  font-size: 1.1em;
+}
+
+.order-item {
+  margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+

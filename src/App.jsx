@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Header from "./components/Header";
+import FinalizedOrders from "./components/FinalizedOrders";
 import "./styles/App.css";
 import Menu from "./components/Menu";
 import OrderForm from "./components/OrderForm";
@@ -9,6 +11,38 @@ function App() {
   const [order, setOrder] = useState([]); // Initialize as an empty array
   const [finalizedOrders, setFinalizedOrders] = useState([]); // Initialize as an empty array
   const [searchResults, setSearchResults] = useState([]); // Initialize as an empty array
+
+
+  const [editingTipOrderId, setEditingTipOrderId] = useState(null);
+  const [newTip, setNewTip] = useState("");
+
+  const handleEditTip = (orderId) => {
+    setEditingTipOrderId(orderId);
+  };
+
+  const handleSaveTip = (orderId) => {
+    const updatedOrders = finalizedOrders.map((order) => {
+      if (order.receiptNumber === orderId) {
+        return {
+          ...order,
+          tipAmount: newTip,
+        };
+      }
+      return order;
+    });
+    setFinalizedOrders(updatedOrders);
+    setEditingTipOrderId(null);
+    setNewTip("");
+  };
+
+  const handleCancelEditTip = () => {
+    setEditingTipOrderId(null);
+    setNewTip("");
+  };
+
+  const handleNewTipChange = (e) => {
+    setNewTip(e.target.value);
+  };
 
   // Add selected items to the current order
   const handleAddToOrder = (selectedItems) => {
@@ -67,7 +101,7 @@ function App() {
       });
   
       if (response.ok) {
-        setFinalizedOrders((prev) => [...prev, finalizedOrder].slice(-2));
+        setFinalizedOrders((prev) => [...prev, finalizedOrder].slice(-5));
         alert("Order finalized and saved successfully!");
         setOrder([]);
       } else {
@@ -77,7 +111,8 @@ function App() {
       console.error("Error saving order:", error);
     }
   };
-  
+
+   
   // Fetch finalized orders on component mount
   useEffect(() => {
     const fetchFinalizedOrders = async () => {
@@ -137,52 +172,36 @@ function App() {
     return `${month}/${day}/${year}`; // Return in MM/DD/YYYY format
   };
   
+ // Define the generateRandomPosition function
+ const generateRandomPosition = () => {
+  const randomX = Math.floor(Math.random() * 100) + "%"; // Random horizontal position
+  const randomY = Math.floor(Math.random() * 100) + "%"; // Random vertical position
+  return { randomX, randomY };
+};
 
 
 return (
   <div className="App">
-    <h1>Shepherd's Pies Order Management</h1>
+    
+    <Header />
+
+
 
     <div className="container">
 
       {/* Left Column */}
       <div className="right-column">
         <Menu onAddToOrder={handleAddToOrder} />
-       
       </div>
 
-      {/* Right Column */}
+      {/* left Column */}
       <div className="left-column">
         <h2>Current Receipt</h2>
         <OrderList order={order} />
         <OrderForm onFinalizeOrder={handleFinalizeOrder} />
-        
-        {/* Finalized Orders Box */}
-        <div className="finalized-orders-box">
-          <h2>Latest Finalized Orders</h2>
-          {Array.isArray(finalizedOrders) && finalizedOrders.length > 0 ? (
-            <ul>
-              {finalizedOrders.map((order) => (
-                <li key={order.receiptNumber || order.timestamp}>
-                  <strong>Receipt #{order.receiptNumber}</strong> | {order.type} | {order.timestamp}
-                  <p>Total: ${Number(order.totalPrice || 0).toFixed(2)}</p>
-                  <p>Tip: ${Number(order.tipAmount || 0).toFixed(2)}</p>
-                  <ul>
-                    {order.items.map((item, index) => (
-                      <li key={`${order.receiptNumber}-${index}`}>
-                        {item.size} pizza with {item.cheese}, {item.sauce}, toppings:{" "}
-                        {item.toppings?.join(", ")} - ${Number(item.price || 0).toFixed(2)}
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p>No finalized orders yet.</p>
-          )}
-        </div>
+        <FinalizedOrders orders={finalizedOrders} onEditTip={handleEditTip} />
       </div>
+      
 
     </div>
 
@@ -192,9 +211,11 @@ return (
         {searchResults?.length > 0 ? (
           <ul>
             {searchResults.map((result) => (
-              <li key={result.receiptNumber}>
-                <strong>Receipt #{result.receiptNumber}</strong> | {result.type} | {result.timestamp}
+              <li key={result.receiptNumber} className="order-item">
+                 <strong>Receipt #{result.receiptNumber}</strong> | {result.type} | {result.timestamp} | Employee No. :{result.employeeNumber} | Table No. :{result.employeeNumber}
+                
                 <p>Total: ${Number(result.totalPrice || 0).toFixed(2)}</p>
+                <p>Tip: ${Number(result.tipAmount || 0).toFixed(2)}</p>
                 <ul>
                   {result.items?.map((item, index) => (
                     <li key={`${result.receiptNumber}-${index}`}>
