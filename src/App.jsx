@@ -44,11 +44,11 @@ function App() {
           <OrderList order={order} />
           <OrderForm onFinalizeOrder={handleFinalizeOrderWrapper} />
           <FinalizedOrders
-  orders={finalizedOrders}
-  onEditTip={(orderId, newTip) =>
-    handleEditTip(orderId, newTip, finalizedOrders, setFinalizedOrders)
-  }
-/>
+            orders={finalizedOrders}
+            onEditTip={(orderId, newTip) =>
+              handleEditTip(orderId, newTip, finalizedOrders, setFinalizedOrders)
+            }
+          />
         </div>
       </div>
       <div className="search-orders">

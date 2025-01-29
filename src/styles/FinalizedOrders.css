@@ -1,0 +1,74 @@
+/* Finalized Orders Section */
+.finalized-orders {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .finalized-orders h2 {
+    margin-bottom: 15px;
+  }
+  
+  
+  .finalized-orders-box {
+    max-height: 300px;
+    overflow-y: auto;
+    
+  }
+  
+  /* Scrollbar Styling */
+  .finalized-orders-box::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .finalized-orders-box::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Tip Section */
+  .tip-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .tip-section p {
+    margin: 0;
+  }
+  
+  .tip-section input {
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .tip-section button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .tip-section .edit-btn {
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+  }
+  
+  .tip-section .save-btn, .tip-section .cancel-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    margin-left: 5px;
+  }
+  
+  .tip-section .cancel-btn {
+    background-color: #f44336;
+  }
+
+  .order-item {
+    margin-bottom: 20px; /* Adjust the value as needed */
+  }
+  

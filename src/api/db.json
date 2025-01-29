@@ -280,8 +280,8 @@
           "price": "13.00"
         }
       ],
-      "tipAmount": "2.00",
-      "totalPrice": "15.00"
+      "tipAmount": "5.00",
+      "totalPrice": "18.00"
     },
     {
       "id": "6d86",
@@ -328,8 +328,8 @@
           "price": "16.50"
         }
       ],
-      "tipAmount": "5.00",
-      "totalPrice": "21.50"
+      "tipAmount": "3.00",
+      "totalPrice": "19.50"
     },
     {
       "id": "ef4b",
@@ -355,6 +355,30 @@
       ],
       "tipAmount": "4.00",
       "totalPrice": "20.50"
+    },
+    {
+      "id": "1785",
+      "receiptNumber": "REC-1738122890534",
+      "timestamp": "1/28/2025, 9:54:50 PM",
+      "date": "1/28/2025",
+      "type": "Dine-In",
+      "tableNumber": "1",
+      "employeeNumber": "1",
+      "items": [
+        {
+          "id": 1,
+          "size": "medium",
+          "cheese": "Four Cheese",
+          "sauce": "Arrabbiata",
+          "toppings": [
+            "green pepper",
+            "onion"
+          ],
+          "price": "13.00"
+        }
+      ],
+      "tipAmount": "0.00",
+      "totalPrice": "13.00"
     }
   ],
   "pizzas": [

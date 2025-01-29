@@ -1,0 +1,62 @@
+/* Order Form Styles */
+.order-form {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-form h2 {
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  
+  label {
+    width: 150px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  input[type="number"],
+  input[type="text"],
+  input[type="date"],
+  select {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    align-self: flex-start;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    width: auto;
+    max-width: 200px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

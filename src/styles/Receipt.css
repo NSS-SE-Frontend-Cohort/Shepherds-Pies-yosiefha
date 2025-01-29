@@ -1,0 +1,33 @@
+/* Receipt Styles */
+.receipt-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .receipt-header {
+    margin-bottom: 20px;
+  }
+  
+  .receipt-items ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .receipt-items li {
+    margin-bottom: 10px;
+  }
+  
+  .receipt-footer {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .receipt-footer strong {
+    font-size: 1.1em;
+  }
+  
