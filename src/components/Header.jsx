@@ -15,6 +15,10 @@ const Header = () => {
         <p className="app-header-subtext">Effortlessly manage orders with our intuitive interface</p>
       </div>
 
+      <div className="header-image-container">
+          <img src="/images/pizza-man.jpg" alt="Man holding pizza and smiling" className="header-image" />
+      </div>
+
       {/* Animations */}
       <div className="header-animation-pizzas">
         {[...Array(6)].map((_, index) => {

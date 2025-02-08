@@ -29,7 +29,25 @@
     color: #ccc;
     text-shadow: 0 0 5px #ccc;
   }
-  
+
+  .header-image {
+    width: 120px; /* Adjust width */
+    height: auto;
+    border-radius: 50%; /* Makes the image circular */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  .header-image-container {
+    flex: 0.5; /* Adjust width as needed */
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+}
+
+.header-image {
+  width: 140px; /* Adjust width */
+  height: auto;
+  border-radius: 50%; /* Makes the image circular */
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
   /* Right Column: Animated Pizzas and Chef Hats */
   .header-animation {
     position: absolute;
