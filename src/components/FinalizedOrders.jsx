@@ -1,36 +1,40 @@
 import React, { useState, useEffect } from "react";
 
+
 const FinalizedOrders = ({ orders = [], onEditTip }) => {
     const [editingTipOrderId, setEditingTipOrderId] = useState(null);
     const [newTip, setNewTip] = useState("");
+    
   
     useEffect(() => {
       if (editingTipOrderId) {
         const orderToEdit = orders.find((order) => order.id === editingTipOrderId);
-        console.log("Editing Order:", orderToEdit);
+       
         if (orderToEdit) {
           setNewTip(orderToEdit.tipAmount || "");
         }
       }
     }, [editingTipOrderId, orders]);
   
-    const handleSaveTip = (orderId) => {
-      console.log("Saving Tip for Order ID:", orderId);
-      console.log("New Tip Value:", newTip);
+    const handleSaveTip = () => {
+      
   
-      if (!newTip) return;
-      onEditTip(orderId, parseFloat(newTip).toFixed(2));
+      if (!newTip || editingTipOrderId === null) return;
+      
+      onEditTip(editingTipOrderId, parseFloat(newTip).toFixed(2));
       setEditingTipOrderId(null);
       setNewTip("");
     };
+   
   
     const handleCancelEditTip = () => {
-      console.log("Canceled editing tip");
+     
       setEditingTipOrderId(null);
       setNewTip("");
     };
   
-    console.log("Orders in FinalizedOrders:", orders);
+  
+    
   
     return (
       <div className="finalized-orders-box">
@@ -51,11 +55,23 @@ const FinalizedOrders = ({ orders = [], onEditTip }) => {
                         onChange={(e) => setNewTip(e.target.value)}
                         placeholder="Enter new tip"
                       />
-                      <button onClick={() => handleSaveTip(order.id)}>Save</button>
+                      <button onClick={handleSaveTip}>Save</button>
                       <button onClick={handleCancelEditTip}>Cancel</button>
                     </div>
                   ) : (
-                    <button onClick={() => setEditingTipOrderId(order.id)}>Edit Tip</button>
+                    <button
+                        onClick={() => {
+                          if (!order.id) {
+                            console.error("Order ID is undefined:", order);
+                            return;
+                          }
+                          console.log("Editing tip for order ID:", order.id);
+                          setEditingTipOrderId(order.id);
+                        }}
+                      >
+                        Edit Tip
+                      </button>
+
                   )}
                 </div>
                 <ul>
@@ -78,6 +94,8 @@ const FinalizedOrders = ({ orders = [], onEditTip }) => {
         )}
       </div>
     );
-  };
+   };
   
   export default FinalizedOrders;
+
+

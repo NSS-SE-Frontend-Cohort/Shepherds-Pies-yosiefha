@@ -1,27 +1,22 @@
-
 const handleEditTip = async (orderId, newTip, finalizedOrders, setFinalizedOrders) => {
-    // Log to check if finalizedOrders is correctly passed
-    console.log("finalizedOrders:", finalizedOrders);
-    
+    console.log("Editing tip for order ID:", orderId);
+
     const orderToUpdate = finalizedOrders.find((order) => order.id === orderId);
     if (!orderToUpdate) {
         alert("Order not found!");
         return;
     }
 
-    const oldTip = parseFloat(orderToUpdate.tipAmount);
+    const oldTip = parseFloat(orderToUpdate.tipAmount || 0);
     const baseTotal = parseFloat(orderToUpdate.totalPrice || 0) - oldTip;
     const newTipValue = parseFloat(newTip || 0);
     const updatedTotalPrice = baseTotal + newTipValue;
 
+    // Update state immediately for smoother UI
     setFinalizedOrders((prevOrders) =>
         prevOrders.map((order) =>
             order.id === orderId
-                ? {
-                    ...order,
-                    tipAmount: newTipValue.toFixed(2),
-                    totalPrice: updatedTotalPrice.toFixed(2),
-                }
+                ? { ...order, tipAmount: newTipValue.toFixed(2), totalPrice: updatedTotalPrice.toFixed(2) }
                 : order
         )
     );
@@ -41,10 +36,9 @@ const handleEditTip = async (orderId, newTip, finalizedOrders, setFinalizedOrder
         if (response.ok) {
             const updatedOrder = await response.json();
             setFinalizedOrders((prevOrders) =>
-                prevOrders.map((order) =>
-                    order.id === orderId ? updatedOrder : order
-                )
+                prevOrders.map((order) => (order.id === orderId ? updatedOrder : order))
             );
+            console.log("Backend updated successfully.");
         } else {
             alert("Failed to update the backend.");
         }
@@ -52,4 +46,6 @@ const handleEditTip = async (orderId, newTip, finalizedOrders, setFinalizedOrder
         alert("Error updating tip. Please try again.");
     }
 };
+
 export default handleEditTip;
+

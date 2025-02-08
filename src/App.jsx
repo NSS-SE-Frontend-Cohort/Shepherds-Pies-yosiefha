@@ -10,7 +10,7 @@ import SearchResults from "./components/SearchResults";
 import handleEditTip from "./handlers/handleEditTip";
 import handleAddToOrder from "./handlers/handleAddToOrder";
 import handleFinalizeOrder from "./handlers/handleFinalizeOrder";
-import  fetchFinalizedOrders  from "./handlers/fetchFinalizedOrders";
+import fetchFinalizedOrders  from "./handlers/fetchFinalizedOrders";
 
 function App() {
   const [order, setOrder] = useState([]); // Initialize as an empty array
@@ -27,10 +27,6 @@ function App() {
     handleFinalizeOrder(data, order, setOrder, setFinalizedOrders);
   };
 
-  // Handle editing tip for finalized orders
-  const handleEditTipWrapper = (orderId, newTip) => {
-    handleEditTip(orderId, newTip, finalizedOrders, setFinalizedOrders);
-  };
 
   return (
     <div className="App">
