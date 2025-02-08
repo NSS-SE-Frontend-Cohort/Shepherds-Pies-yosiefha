@@ -1164,6 +1164,57 @@
       ],
       "tipAmount": "4.00",
       "totalPrice": "25.00"
+    },
+    {
+      "id": "a39b",
+      "receiptNumber": "REC-1738988010153",
+      "timestamp": "2/7/2025, 10:13:30 PM",
+      "date": "2/7/2025",
+      "type": "Dine-In",
+      "tableNumber": "4",
+      "employeeNumber": "2",
+      "items": [
+        {
+          "id": 1,
+          "size": "medium",
+          "cheese": "Four Cheese",
+          "sauce": "Garlic White",
+          "toppings": [
+            "black olive",
+            "green pepper",
+            "onion",
+            "mushroom"
+          ],
+          "price": "14.00"
+        }
+      ],
+      "tipAmount": "5.00",
+      "totalPrice": "19.00"
+    },
+    {
+      "id": "1c7a",
+      "receiptNumber": "REC-1738988084158",
+      "timestamp": "2/7/2025, 10:14:44 PM",
+      "date": "2/7/2025",
+      "type": "Delivery",
+      "tableNumber": null,
+      "employeeNumber": "2",
+      "items": [
+        {
+          "id": 1,
+          "size": "large",
+          "cheese": "Vegan",
+          "sauce": "Arrabbiata",
+          "toppings": [
+            "extra cheese",
+            "basil",
+            "black olive"
+          ],
+          "price": "16.50"
+        }
+      ],
+      "tipAmount": "4.00",
+      "totalPrice": "25.50"
     }
   ],
   "pizzas": [

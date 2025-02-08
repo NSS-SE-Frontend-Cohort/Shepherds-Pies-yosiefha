@@ -30,8 +30,8 @@ const handleFinalizeOrder = async (data, order, setOrder, setFinalizedOrders) =>
       });
 
       if (response.ok) {
-          const savedOrder = await response.json(); // Get the full saved order with its assigned ID
-          setFinalizedOrders((prev) => [...prev, savedOrder].slice(-5)); // Store the correct ID
+          
+          await fetchFinalizedOrders(setFinalizedOrders); // Fetch updated orders (sorted)
           alert("Order finalized and saved successfully!");
           setOrder([]); // Clear current order
       } else {
