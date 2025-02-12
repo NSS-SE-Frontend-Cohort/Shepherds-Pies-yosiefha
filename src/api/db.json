@@ -1311,6 +1311,30 @@
       ],
       "tipAmount": "0.00",
       "totalPrice": "13.00"
+    },
+    {
+      "id": "0c10",
+      "receiptNumber": "REC-1739386031918",
+      "timestamp": "2/12/2025, 12:47:11 PM",
+      "date": "2/12/2025",
+      "type": "Dine-In",
+      "tableNumber": "1",
+      "employeeNumber": "2",
+      "items": [
+        {
+          "id": 1,
+          "size": "large",
+          "cheese": "Four Cheese",
+          "sauce": "Marinara",
+          "toppings": [
+            "onion",
+            "mushroom"
+          ],
+          "price": "16.00"
+        }
+      ],
+      "tipAmount": "10.00",
+      "totalPrice": "26.00"
     }
   ],
   "pizzas": [
