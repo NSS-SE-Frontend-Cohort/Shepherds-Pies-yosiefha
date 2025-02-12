@@ -32,20 +32,26 @@ function App() {
     <div className="App">
       <Header />
       <div className="container">
-        <div className="right-column">
+        <div className="left-column">
           <Menu onAddToOrder={(selectedItems) => handleAddToOrder(selectedItems, order, setOrder)} />
         </div>
-        <div className="left-column">
-          <h2>Current Receipt</h2>
-          <OrderList order={order} />
-          <OrderForm onFinalizeOrder={handleFinalizeOrderWrapper} />
-          <FinalizedOrders
-            orders={finalizedOrders}
-            onEditTip={(orderId, newTip) =>
-              handleEditTip(orderId, newTip, finalizedOrders, setFinalizedOrders)
-            }
-          />
+        <div className="right-column">
+          <div className="upper-row">
+            <h2>Current Receipt</h2>
+            <OrderList order={order} />
+            <OrderForm onFinalizeOrder={handleFinalizeOrderWrapper} />
+          </div>
+
+          <div className="lower-row">
+            <FinalizedOrders
+              orders={finalizedOrders}
+              onEditTip={(orderId, newTip) =>
+                handleEditTip(orderId, newTip, finalizedOrders, setFinalizedOrders)
+              }
+            />
+          </div>
         </div>
+
       </div>
       <div className="search-orders">
         <SearchOrders setSearchResults={setSearchResults} />
