@@ -1215,6 +1215,102 @@
       ],
       "tipAmount": "4.00",
       "totalPrice": "25.50"
+    },
+    {
+      "id": "1826",
+      "receiptNumber": "REC-1739380602919",
+      "timestamp": "2/12/2025, 11:16:42 AM",
+      "date": "2/12/2025",
+      "type": "Dine-In",
+      "tableNumber": "1",
+      "employeeNumber": "1",
+      "items": [
+        {
+          "id": 1,
+          "size": "medium",
+          "cheese": "Four Cheese",
+          "sauce": "Arrabbiata",
+          "toppings": [
+            "onion",
+            "green pepper"
+          ],
+          "price": "13.00"
+        }
+      ],
+      "tipAmount": "0.00",
+      "totalPrice": "13.00"
+    },
+    {
+      "id": "b4b2",
+      "receiptNumber": "REC-1739380831232",
+      "timestamp": "2/12/2025, 11:20:31 AM",
+      "date": "2/12/2025",
+      "type": "Dine-In",
+      "tableNumber": "1",
+      "employeeNumber": "1",
+      "items": [
+        {
+          "id": 1,
+          "size": "medium",
+          "cheese": "Four Cheese",
+          "sauce": "Arrabbiata",
+          "toppings": [
+            "onion",
+            "green pepper"
+          ],
+          "price": "13.00"
+        }
+      ],
+      "tipAmount": "0.00",
+      "totalPrice": "13.00"
+    },
+    {
+      "id": "3869",
+      "receiptNumber": "REC-1739380917476",
+      "timestamp": "2/12/2025, 11:21:57 AM",
+      "date": "2/12/2025",
+      "type": "Dine-In",
+      "tableNumber": "1",
+      "employeeNumber": "1",
+      "items": [
+        {
+          "id": 1,
+          "size": "medium",
+          "cheese": "Four Cheese",
+          "sauce": "Arrabbiata",
+          "toppings": [
+            "onion",
+            "green pepper"
+          ],
+          "price": "13.00"
+        }
+      ],
+      "tipAmount": "0.00",
+      "totalPrice": "13.00"
+    },
+    {
+      "id": "6e61",
+      "receiptNumber": "REC-1739381090035",
+      "timestamp": "2/12/2025, 11:24:50 AM",
+      "date": "2/12/2025",
+      "type": "Dine-In",
+      "tableNumber": "1",
+      "employeeNumber": "1",
+      "items": [
+        {
+          "id": 1,
+          "size": "medium",
+          "cheese": "Vegan",
+          "sauce": "Arrabbiata",
+          "toppings": [
+            "black olive",
+            "basil"
+          ],
+          "price": "13.00"
+        }
+      ],
+      "tipAmount": "0.00",
+      "totalPrice": "13.00"
     }
   ],
   "pizzas": [

@@ -1,3 +1,4 @@
+import fetchFinalizedOrders  from "./fetchFinalizedOrders";
 const handleFinalizeOrder = async (data, order, setOrder, setFinalizedOrders) => {
   const { type, tableNumber, employeeNumber, tipAmount } = data;
 
